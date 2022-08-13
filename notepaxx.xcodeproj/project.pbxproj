@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EDCB8C8628A85F8300AACCB0 /* notepaxxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8C8528A85F8300AACCB0 /* notepaxxApp.swift */; };
+		EDCB8C8828A85F8300AACCB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8C8728A85F8300AACCB0 /* ContentView.swift */; };
+		EDCB8C8A28A85F8600AACCB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCB8C8928A85F8600AACCB0 /* Assets.xcassets */; };
+		EDCB8C8D28A85F8600AACCB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCB8C8C28A85F8600AACCB0 /* Preview Assets.xcassets */; };
+		EDCB8C9828A85F8600AACCB0 /* notepaxxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8C9728A85F8600AACCB0 /* notepaxxTests.swift */; };
+		EDCB8CA228A85F8600AACCB0 /* notepaxxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8CA128A85F8600AACCB0 /* notepaxxUITests.swift */; };
+		EDCB8CA428A85F8600AACCB0 /* notepaxxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8CA328A85F8600AACCB0 /* notepaxxUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDCB8C9428A85F8600AACCB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDCB8C7A28A85F8200AACCB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDCB8C8128A85F8300AACCB0;
+			remoteInfo = notepaxx;
+		};
+		EDCB8C9E28A85F8600AACCB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EDCB8C7A28A85F8200AACCB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EDCB8C8128A85F8300AACCB0;
+			remoteInfo = notepaxx;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EDCB8C8228A85F8300AACCB0 /* notepaxx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notepaxx.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDCB8C8528A85F8300AACCB0 /* notepaxxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notepaxxApp.swift; sourceTree = "<group>"; };
+		EDCB8C8728A85F8300AACCB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EDCB8C8928A85F8600AACCB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EDCB8C8C28A85F8600AACCB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EDCB8C8E28A85F8600AACCB0 /* notepaxx.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = notepaxx.entitlements; sourceTree = "<group>"; };
+		EDCB8C9328A85F8600AACCB0 /* notepaxxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = notepaxxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDCB8C9728A85F8600AACCB0 /* notepaxxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notepaxxTests.swift; sourceTree = "<group>"; };
+		EDCB8C9D28A85F8600AACCB0 /* notepaxxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = notepaxxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDCB8CA128A85F8600AACCB0 /* notepaxxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notepaxxUITests.swift; sourceTree = "<group>"; };
+		EDCB8CA328A85F8600AACCB0 /* notepaxxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notepaxxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EDCB8C7F28A85F8300AACCB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCB8C9028A85F8600AACCB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCB8C9A28A85F8600AACCB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EDCB8C7928A85F8200AACCB0 = {
+			isa = PBXGroup;
+			children = (
+				EDCB8C8428A85F8300AACCB0 /* notepaxx */,
+				EDCB8C9628A85F8600AACCB0 /* notepaxxTests */,
+				EDCB8CA028A85F8600AACCB0 /* notepaxxUITests */,
+				EDCB8C8328A85F8300AACCB0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EDCB8C8328A85F8300AACCB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EDCB8C8228A85F8300AACCB0 /* notepaxx.app */,
+				EDCB8C9328A85F8600AACCB0 /* notepaxxTests.xctest */,
+				EDCB8C9D28A85F8600AACCB0 /* notepaxxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EDCB8C8428A85F8300AACCB0 /* notepaxx */ = {
+			isa = PBXGroup;
+			children = (
+				EDCB8C8528A85F8300AACCB0 /* notepaxxApp.swift */,
+				EDCB8C8728A85F8300AACCB0 /* ContentView.swift */,
+				EDCB8C8928A85F8600AACCB0 /* Assets.xcassets */,
+				EDCB8C8E28A85F8600AACCB0 /* notepaxx.entitlements */,
+				EDCB8C8B28A85F8600AACCB0 /* Preview Content */,
+			);
+			path = notepaxx;
+			sourceTree = "<group>";
+		};
+		EDCB8C8B28A85F8600AACCB0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EDCB8C8C28A85F8600AACCB0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EDCB8C9628A85F8600AACCB0 /* notepaxxTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDCB8C9728A85F8600AACCB0 /* notepaxxTests.swift */,
+			);
+			path = notepaxxTests;
+			sourceTree = "<group>";
+		};
+		EDCB8CA028A85F8600AACCB0 /* notepaxxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EDCB8CA128A85F8600AACCB0 /* notepaxxUITests.swift */,
+				EDCB8CA328A85F8600AACCB0 /* notepaxxUITestsLaunchTests.swift */,
+			);
+			path = notepaxxUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EDCB8C8128A85F8300AACCB0 /* notepaxx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDCB8CA728A85F8600AACCB0 /* Build configuration list for PBXNativeTarget "notepaxx" */;
+			buildPhases = (
+				EDCB8C7E28A85F8300AACCB0 /* Sources */,
+				EDCB8C7F28A85F8300AACCB0 /* Frameworks */,
+				EDCB8C8028A85F8300AACCB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = notepaxx;
+			productName = notepaxx;
+			productReference = EDCB8C8228A85F8300AACCB0 /* notepaxx.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EDCB8C9228A85F8600AACCB0 /* notepaxxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDCB8CAA28A85F8600AACCB0 /* Build configuration list for PBXNativeTarget "notepaxxTests" */;
+			buildPhases = (
+				EDCB8C8F28A85F8600AACCB0 /* Sources */,
+				EDCB8C9028A85F8600AACCB0 /* Frameworks */,
+				EDCB8C9128A85F8600AACCB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDCB8C9528A85F8600AACCB0 /* PBXTargetDependency */,
+			);
+			name = notepaxxTests;
+			productName = notepaxxTests;
+			productReference = EDCB8C9328A85F8600AACCB0 /* notepaxxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EDCB8C9C28A85F8600AACCB0 /* notepaxxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDCB8CAD28A85F8600AACCB0 /* Build configuration list for PBXNativeTarget "notepaxxUITests" */;
+			buildPhases = (
+				EDCB8C9928A85F8600AACCB0 /* Sources */,
+				EDCB8C9A28A85F8600AACCB0 /* Frameworks */,
+				EDCB8C9B28A85F8600AACCB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDCB8C9F28A85F8600AACCB0 /* PBXTargetDependency */,
+			);
+			name = notepaxxUITests;
+			productName = notepaxxUITests;
+			productReference = EDCB8C9D28A85F8600AACCB0 /* notepaxxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EDCB8C7A28A85F8200AACCB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					EDCB8C8128A85F8300AACCB0 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					EDCB8C9228A85F8600AACCB0 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = EDCB8C8128A85F8300AACCB0;
+					};
+					EDCB8C9C28A85F8600AACCB0 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = EDCB8C8128A85F8300AACCB0;
+					};
+				};
+			};
+			buildConfigurationList = EDCB8C7D28A85F8200AACCB0 /* Build configuration list for PBXProject "notepaxx" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EDCB8C7928A85F8200AACCB0;
+			productRefGroup = EDCB8C8328A85F8300AACCB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EDCB8C8128A85F8300AACCB0 /* notepaxx */,
+				EDCB8C9228A85F8600AACCB0 /* notepaxxTests */,
+				EDCB8C9C28A85F8600AACCB0 /* notepaxxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EDCB8C8028A85F8300AACCB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCB8C8D28A85F8600AACCB0 /* Preview Assets.xcassets in Resources */,
+				EDCB8C8A28A85F8600AACCB0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCB8C9128A85F8600AACCB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCB8C9B28A85F8600AACCB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDCB8C7E28A85F8300AACCB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCB8C8828A85F8300AACCB0 /* ContentView.swift in Sources */,
+				EDCB8C8628A85F8300AACCB0 /* notepaxxApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCB8C8F28A85F8600AACCB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCB8C9828A85F8600AACCB0 /* notepaxxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDCB8C9928A85F8600AACCB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDCB8CA428A85F8600AACCB0 /* notepaxxUITestsLaunchTests.swift in Sources */,
+				EDCB8CA228A85F8600AACCB0 /* notepaxxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDCB8C9528A85F8600AACCB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDCB8C8128A85F8300AACCB0 /* notepaxx */;
+			targetProxy = EDCB8C9428A85F8600AACCB0 /* PBXContainerItemProxy */;
+		};
+		EDCB8C9F28A85F8600AACCB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EDCB8C8128A85F8300AACCB0 /* notepaxx */;
+			targetProxy = EDCB8C9E28A85F8600AACCB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EDCB8CA528A85F8600AACCB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EDCB8CA628A85F8600AACCB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		EDCB8CA828A85F8600AACCB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = notepaxx/notepaxx.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"notepaxx/Preview Content\"";
+				DEVELOPMENT_TEAM = MX3MMT3JG2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brianangulo.notepaxx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EDCB8CA928A85F8600AACCB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = notepaxx/notepaxx.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"notepaxx/Preview Content\"";
+				DEVELOPMENT_TEAM = MX3MMT3JG2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brianangulo.notepaxx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EDCB8CAB28A85F8600AACCB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MX3MMT3JG2;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brianangulo.notepaxxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/notepaxx.app/Contents/MacOS/notepaxx";
+			};
+			name = Debug;
+		};
+		EDCB8CAC28A85F8600AACCB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MX3MMT3JG2;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brianangulo.notepaxxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/notepaxx.app/Contents/MacOS/notepaxx";
+			};
+			name = Release;
+		};
+		EDCB8CAE28A85F8600AACCB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MX3MMT3JG2;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brianangulo.notepaxxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = notepaxx;
+			};
+			name = Debug;
+		};
+		EDCB8CAF28A85F8600AACCB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MX3MMT3JG2;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brianangulo.notepaxxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = notepaxx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EDCB8C7D28A85F8200AACCB0 /* Build configuration list for PBXProject "notepaxx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDCB8CA528A85F8600AACCB0 /* Debug */,
+				EDCB8CA628A85F8600AACCB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDCB8CA728A85F8600AACCB0 /* Build configuration list for PBXNativeTarget "notepaxx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDCB8CA828A85F8600AACCB0 /* Debug */,
+				EDCB8CA928A85F8600AACCB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDCB8CAA28A85F8600AACCB0 /* Build configuration list for PBXNativeTarget "notepaxxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDCB8CAB28A85F8600AACCB0 /* Debug */,
+				EDCB8CAC28A85F8600AACCB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDCB8CAD28A85F8600AACCB0 /* Build configuration list for PBXNativeTarget "notepaxxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDCB8CAE28A85F8600AACCB0 /* Debug */,
+				EDCB8CAF28A85F8600AACCB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EDCB8C7A28A85F8200AACCB0 /* Project object */;
+}
