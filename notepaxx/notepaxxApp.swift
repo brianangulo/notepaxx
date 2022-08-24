@@ -16,7 +16,10 @@ struct notepaxxApp: App {
         WindowGroup {
             ContentView(stringHolder: $viewModel.text)
                 .onAppear {
+                    // adds subscription to the delegate for when files get opened while its active
                     appDelegate.addCallback(cb: viewModel.shouldLoadFileContent)
+                    // calling on appear for when app is coming from background and delegate function is called before callback ins instantiated
+                    viewModel.shouldLoadFileContent(content: appDelegate.openedFileContent)
                 }
         }
         .handlesExternalEvents(matching: [])
