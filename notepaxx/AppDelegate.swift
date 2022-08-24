@@ -11,7 +11,7 @@ import AppKit
 class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
     @Published var openedFileContent = ""
     var callback: (String) -> Void = {
-        (content: String) in print("foo")
+        (content: String) in print("empty")
     }
     
     func addCallback(cb: @escaping (String) -> Void) -> Void {
