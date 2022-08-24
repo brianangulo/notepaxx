@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		EDCB8C8628A85F8300AACCB0 /* notepaxxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8C8528A85F8300AACCB0 /* notepaxxApp.swift */; };
-		EDCB8C8828A85F8300AACCB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8C8728A85F8300AACCB0 /* ContentView.swift */; };
 		EDCB8C8A28A85F8600AACCB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCB8C8928A85F8600AACCB0 /* Assets.xcassets */; };
 		EDCB8C8D28A85F8600AACCB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCB8C8C28A85F8600AACCB0 /* Preview Assets.xcassets */; };
 		EDCB8C9828A85F8600AACCB0 /* notepaxxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8C9728A85F8600AACCB0 /* notepaxxTests.swift */; };
 		EDCB8CA228A85F8600AACCB0 /* notepaxxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8CA128A85F8600AACCB0 /* notepaxxUITests.swift */; };
 		EDCB8CA428A85F8600AACCB0 /* notepaxxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8CA328A85F8600AACCB0 /* notepaxxUITestsLaunchTests.swift */; };
+		EDCB8CB728B3567B00AACCB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8CB628B3567B00AACCB0 /* ContentView.swift */; };
+		EDCB8CB928B3568D00AACCB0 /* ContentViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8CB828B3568D00AACCB0 /* ContentViewViewModel.swift */; };
+		EDCB8CBB28B5AB9900AACCB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8CBA28B5AB9800AACCB0 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		EDCB8C8228A85F8300AACCB0 /* notepaxx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notepaxx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCB8C8528A85F8300AACCB0 /* notepaxxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notepaxxApp.swift; sourceTree = "<group>"; };
-		EDCB8C8728A85F8300AACCB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EDCB8C8928A85F8600AACCB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDCB8C8C28A85F8600AACCB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDCB8C8E28A85F8600AACCB0 /* notepaxx.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = notepaxx.entitlements; sourceTree = "<group>"; };
@@ -45,6 +46,10 @@
 		EDCB8C9D28A85F8600AACCB0 /* notepaxxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = notepaxxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCB8CA128A85F8600AACCB0 /* notepaxxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notepaxxUITests.swift; sourceTree = "<group>"; };
 		EDCB8CA328A85F8600AACCB0 /* notepaxxUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notepaxxUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EDCB8CB628B3567B00AACCB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EDCB8CB828B3568D00AACCB0 /* ContentViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewViewModel.swift; sourceTree = "<group>"; };
+		EDCB8CBA28B5AB9800AACCB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EDCB8CBC28B5AEE000AACCB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +100,13 @@
 		EDCB8C8428A85F8300AACCB0 /* notepaxx */ = {
 			isa = PBXGroup;
 			children = (
+				EDCB8CBC28B5AEE000AACCB0 /* Info.plist */,
+				EDCB8CB528B3566200AACCB0 /* ContentView */,
 				EDCB8C8528A85F8300AACCB0 /* notepaxxApp.swift */,
-				EDCB8C8728A85F8300AACCB0 /* ContentView.swift */,
 				EDCB8C8928A85F8600AACCB0 /* Assets.xcassets */,
 				EDCB8C8E28A85F8600AACCB0 /* notepaxx.entitlements */,
 				EDCB8C8B28A85F8600AACCB0 /* Preview Content */,
+				EDCB8CBA28B5AB9800AACCB0 /* AppDelegate.swift */,
 			);
 			path = notepaxx;
 			sourceTree = "<group>";
@@ -127,6 +134,15 @@
 				EDCB8CA328A85F8600AACCB0 /* notepaxxUITestsLaunchTests.swift */,
 			);
 			path = notepaxxUITests;
+			sourceTree = "<group>";
+		};
+		EDCB8CB528B3566200AACCB0 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				EDCB8CB628B3567B00AACCB0 /* ContentView.swift */,
+				EDCB8CB828B3568D00AACCB0 /* ContentViewViewModel.swift */,
+			);
+			path = ContentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDCB8C8828A85F8300AACCB0 /* ContentView.swift in Sources */,
+				EDCB8CBB28B5AB9900AACCB0 /* AppDelegate.swift in Sources */,
+				EDCB8CB728B3567B00AACCB0 /* ContentView.swift in Sources */,
 				EDCB8C8628A85F8300AACCB0 /* notepaxxApp.swift in Sources */,
+				EDCB8CB928B3568D00AACCB0 /* ContentViewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +444,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notepaxx/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,6 +472,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notepaxx/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
