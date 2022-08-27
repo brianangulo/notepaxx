@@ -14,13 +14,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, ObservableObject {
         (content: String) in print("empty")
     }
     
-    func addCallback(cb: @escaping (String) -> Void) -> Void {
-        self.callback = cb
+    func subscribeToFileContentLoaded(callback: @escaping (String) -> Void) -> Void {
+        self.callback = callback
     }
     
     func application(_ application: NSApplication, open urls: [URL]) {
-        print(">> \(urls)")
-        print(">> \(application)")
         // only getting the first one since each application can only deal with one
         if (urls.count > 0) {
             let fileUrl: URL = urls[0]
