@@ -17,14 +17,16 @@ struct notepaxxApp: App {
             ContentView(stringHolder: $viewModel.text)
                 .onAppear {
                     // adds subscription to the delegate for when files get opened while its active
-                    appDelegate.addCallback(cb: viewModel.shouldLoadFileContent)
+                    appDelegate.subscribeToFileContentLoaded(callback: viewModel.loadFileContent)
                     // calling on appear for when app is coming from background and delegate function is called before callback ins instantiated
-                    viewModel.shouldLoadFileContent(content: appDelegate.openedFileContent)
+                    viewModel.loadFileContent(content: appDelegate.openedFileContent)
+                    // disable multitab
+                    NSWindow.allowsAutomaticWindowTabbing = false
                 }
         }
         .handlesExternalEvents(matching: [])
         .commands {
-            CommandGroup(after: CommandGroupPlacement.newItem) {
+            CommandGroup(replacing: .newItem) {
                  Button("Save") {
                      viewModel.save()
                  }
@@ -38,9 +40,17 @@ extension notepaxxApp {
         @Published var text: String = ""
         // checks if needed to load file content content should come from appDelegate
         // this function is designed to be used as a callback for appdelegate
-        func shouldLoadFileContent(content: String) -> Void {
+        func loadFileContent(content: String) -> Void {
             if (!content.isEmpty) {
                 self.text = content
+                self.bringToFocus()
+            }
+        }
+        
+        // if the app is hidden it will bring it to focus
+        func bringToFocus() -> Void {
+            if !(NSApp.windows.first?.isVisible ?? false) {
+                NSApp.windows.first?.orderFrontRegardless()
             }
         }
         
