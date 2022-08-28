@@ -12,17 +12,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Set environment variables from project settings
-        run: |
-          function set-env-from-proj { 
-            echo "::set-env name=$1::$(xcodebuild -scheme notepaxx -showBuildSettings | grep " $1 " | sed "s/[ ]*$1 = //")"
-          }
-          set-env-from-proj FULL_PRODUCT_NAME
-          set-env-from-proj INSTALL_PATH
-          set-env-from-proj PRODUCT_BUNDLE_IDENTIFIER
-          set-env-from-proj PRODUCT_MODULE_NAME
-          set-env-from-proj PRODUCT_NAME
-          set-env-from-proj PROJECT_NAME
       - name: Import signing certificate
         env:
           MACOS_CERTIFICATE: ${{ secrets.MACOS_CERTIFICATE }}
