@@ -12,6 +12,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Set environment variables from project settings
+        run: |
+          function set-env-from-proj { 
+            echo "::set-env name=$1::$(xcodebuild -scheme notepaxx -showBuildSettings | grep " $1 " | sed "s/[ ]*$1 = //")"
+          }
+          set-env-from-proj FULL_PRODUCT_NAME
+          set-env-from-proj INSTALL_PATH
+          set-env-from-proj PRODUCT_BUNDLE_IDENTIFIER
+          set-env-from-proj PRODUCT_MODULE_NAME
+          set-env-from-proj PRODUCT_NAME
+          set-env-from-proj PROJECT_NAME
       - name: Import signing certificate
         env:
           MACOS_CERTIFICATE: ${{ secrets.MACOS_CERTIFICATE }}
@@ -30,16 +41,21 @@ jobs:
                           -T /usr/bin/codesign
           security set-key-partition-list -S apple-tool:,apple: -s -k $KEYCHAIN_PASSWORD $KEYCHAIN_FILE
       - name: Build
-        run: xcodebuild -scheme notepaxx -configuration Release -derivedDataPath build | xcpretty
-      - name: Extract app into a folder
+        shell: bash --noprofile --norc -eo pipefail {0}
         run: |
           mkdir app
-          mv build/Build/Products/Release/notepaxx.app app
+          xcodebuild -scheme notepaxx install DSTROOT=app | xcpretty
+      - name: Packaging as DMG
+        run: |
+          hdiutil create \
+                  -fs HFS+ \
+                  -srcfolder "./app/Applications/notepaxx.app" \
+                  -volname "notepaxxapp" "./app/notepaxxapp.dmg"
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: notepaxxapp
-          path: app/
+          path: app/notepaxxapp.dmg
 
   release-app:
     name: Release App
@@ -51,18 +67,13 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: notepaxxapp
-      - name: Zip up app Artifact
-        uses: thedoctor0/zip-release@main
-        with:
-          type: 'zip'
-          filename: 'app.zip'
       - name: Create GH release
         id: creates_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v1.${{ github.run_number }}
+          tag_name: v1.${{ github.run_number }}.0
           release_name: v1.${{ github.run_number }}.0
       - name: Upload release artifact
         uses: actions/upload-release-asset@v1
@@ -70,6 +81,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.creates_release.outputs.upload_url }}
-          asset_path: ./app.zip
-          asset_name: notepaxxapp-v1.${{ github.run_number }}.0.zip
-          asset_content_type: application/zip
+          asset_path: ./notepaxxapp.dmg
+          asset_name: notepaxxapp-v1.${{ github.run_number }}.0.dmg
+          asset_content_type: application/dmg
