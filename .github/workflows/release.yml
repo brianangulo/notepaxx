@@ -1,0 +1,53 @@
+name: Xcode - Build and Release to GH
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  build:
+    name: Build using xcodebuild command
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Build
+        run: xcodebuild -scheme notepaxx -configuration Release -derivedDataPath build
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: notepaxxapp
+          path: build/Build/Products/Release/
+
+  release-app:
+    name: Release App
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Download site content
+        uses: actions/download-artifact@v3
+        with:
+          name: notepaxxapp
+      - name: Zip up app Artifact
+        uses: thedoctor0/zip-release@main
+        with:
+          type: 'zip'
+          filename: 'app.zip'
+      - name: Create GH release
+        id: creates_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v1.${{ github.run_number }}
+          release_name: v1.${{ github.run_number }}
+      - name: Upload release artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.creates_release.outputs.upload_url }}
+          asset_path: ./app.zip
+          asset_name: notepaxxapp-v1.${{ github.run_number }}.zip
+          asset_content_type: application/zip
