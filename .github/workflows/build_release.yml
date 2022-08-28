@@ -12,26 +12,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Build
-        run: xcodebuild -scheme notepaxx -configuration Release -derivedDataPath build
-      - name: Extract app into a folder
-        run: |
-          mkdir app
-          mv build/Build/Products/Release/notepaxx.app app
-      - name: Codesign executable
+      - name: Import signing certificate
         env:
           MACOS_CERTIFICATE: ${{ secrets.MACOS_CERTIFICATE }}
           MACOS_CERTIFICATE_PWD: ${{ secrets.MACOS_CERTIFICATE_PWD }}
           SECURITY_IDENTITY: ${{ secrets.SECURITY_IDENTITY }}
         run: |
-          KEYCHAIN_PASS=Password123
-          echo $MACOS_CERTIFICATE | base64 --decode > certificate.p12
-          security create-keychain -p $KEYCHAIN_PASS build.keychain
-          security default-keychain -s build.keychain
-          security unlock-keychain -p $KEYCHAIN_PASS build.keychain
-          security import certificate.p12 -k build.keychain -P $MACOS_CERTIFICATE_PWD -T /usr/bin/codesign
-          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k Password123 build.keychain
-          /usr/bin/codesign --force -s $SECURITY_IDENTITY ./app/notepaxx.app/Contents/MacOS/notepaxx -v
+          KEYCHAIN_FILE=default.keychain
+          KEYCHAIN_PASSWORD=myvoiceismypassport
+          security create-keychain -p $KEYCHAIN_PASSWORD $KEYCHAIN_FILE
+          security default-keychain -s $KEYCHAIN_FILE
+          security unlock-keychain -p $KEYCHAIN_PASSWORD $KEYCHAIN_FILE
+          security import <(echo $MACOS_CERTIFICATE | base64 --decode) \
+                          -f pkcs12 \
+                          -k $KEYCHAIN_FILE \
+                          -P $MACOS_CERTIFICATE_PWD \
+                          -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple: -s -k $KEYCHAIN_PASSWORD $KEYCHAIN_FILE
+      - name: Build
+        run: xcodebuild -scheme notepaxx -configuration Release -derivedDataPath build | xcpretty
+      - name: Extract app into a folder
+        run: |
+          mkdir app
+          mv build/Build/Products/Release/notepaxx.app app
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
