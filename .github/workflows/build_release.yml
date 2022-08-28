@@ -20,6 +20,10 @@ jobs:
           mkdir app
           mv build/Build/Products/Release/notepaxx.app app
       - name: Codesign executable
+        env:
+          MACOS_CERTIFICATE: ${{ secrets.MACOS_CERTIFICATE }}
+          MACOS_CERTIFICATE_PWD: ${{ secrets.MACOS_CERTIFICATE_PWD }}
+          SECURITY_IDENTITY: ${{ secrets.SECURITY_IDENTITY }}
         run: |
           KEYCHAIN_PASS=Password123
           echo passw $MACOS_CERTIFICATE_PWD
@@ -30,10 +34,6 @@ jobs:
           security import certificate.p12 -k build.keychain -P $MACOS_CERTIFICATE_PWD -T /usr/bin/codesign
           security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k Password123 build.keychain
           /usr/bin/codesign --force -s $SECURITY_IDENTITY ./app/notepaxx.app -v
-        env: 
-          MACOS_CERTIFICATE: ${{ secrets.MACOS_CERTIFICATE }}
-          MACOS_CERTIFICATE_PWD: ${{ secrets.MACOS_CERTIFICATE_PWD }}
-          SECURITY_IDENTITY: ${{ secrets.SECURITY_IDENTITY }}
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
