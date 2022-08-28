@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		EDCB8C8628A85F8300AACCB0 /* notepaxxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8C8528A85F8300AACCB0 /* notepaxxApp.swift */; };
-		EDCB8C8A28A85F8600AACCB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCB8C8928A85F8600AACCB0 /* Assets.xcassets */; };
 		EDCB8C8D28A85F8600AACCB0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCB8C8C28A85F8600AACCB0 /* Preview Assets.xcassets */; };
 		EDCB8C9828A85F8600AACCB0 /* notepaxxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8C9728A85F8600AACCB0 /* notepaxxTests.swift */; };
 		EDCB8CA228A85F8600AACCB0 /* notepaxxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8CA128A85F8600AACCB0 /* notepaxxUITests.swift */; };
 		EDCB8CA428A85F8600AACCB0 /* notepaxxUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8CA328A85F8600AACCB0 /* notepaxxUITestsLaunchTests.swift */; };
 		EDCB8CB728B3567B00AACCB0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8CB628B3567B00AACCB0 /* ContentView.swift */; };
 		EDCB8CBB28B5AB9900AACCB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCB8CBA28B5AB9800AACCB0 /* AppDelegate.swift */; };
+		EDCB8CF828BB057300AACCB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDCB8CF728BB057300AACCB0 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		EDCB8C8228A85F8300AACCB0 /* notepaxx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notepaxx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCB8C8528A85F8300AACCB0 /* notepaxxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notepaxxApp.swift; sourceTree = "<group>"; };
-		EDCB8C8928A85F8600AACCB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDCB8C8C28A85F8600AACCB0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDCB8C8E28A85F8600AACCB0 /* notepaxx.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = notepaxx.entitlements; sourceTree = "<group>"; };
 		EDCB8C9328A85F8600AACCB0 /* notepaxxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = notepaxxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +47,7 @@
 		EDCB8CB628B3567B00AACCB0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EDCB8CBA28B5AB9800AACCB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDCB8CBC28B5AEE000AACCB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EDCB8CF728BB057300AACCB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../../Desktop/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 				EDCB8CB628B3567B00AACCB0 /* ContentView.swift */,
 				EDCB8C8528A85F8300AACCB0 /* notepaxxApp.swift */,
 				EDCB8CBA28B5AB9800AACCB0 /* AppDelegate.swift */,
-				EDCB8C8928A85F8600AACCB0 /* Assets.xcassets */,
+				EDCB8CF728BB057300AACCB0 /* Assets.xcassets */,
 				EDCB8C8E28A85F8600AACCB0 /* notepaxx.entitlements */,
 				EDCB8C8B28A85F8600AACCB0 /* Preview Content */,
 			);
@@ -239,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDCB8C8D28A85F8600AACCB0 /* Preview Assets.xcassets in Resources */,
-				EDCB8C8A28A85F8600AACCB0 /* Assets.xcassets in Resources */,
+				EDCB8CF828BB057300AACCB0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
