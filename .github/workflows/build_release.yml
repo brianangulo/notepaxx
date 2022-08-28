@@ -14,8 +14,9 @@ jobs:
       - name: Build
         run: xcodebuild -scheme notepaxx -configuration Release -derivedDataPath build
       - name: Extract app into a folder
-        run: mkdir app
-        run: mv build/Build/Products/Release/notepaxx.app app
+        run: |
+          mkdir app
+          mv build/Build/Products/Release/notepaxx.app app
       - name: Codesign executable
         env: 
           MACOS_CERTIFICATE: ${{ secrets.MACOS_CERTIFICATE }}
