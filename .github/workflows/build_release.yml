@@ -27,7 +27,7 @@ jobs:
           SECURITY_IDENTITY: ${{ secrets.SECURITY_IDENTITY }}
         run: |
           KEYCHAIN_PASS=Password123
-          echo passw $MACOS_CERTIFICATE_PWD
+          echo passw ${{ secrets.MACOS_CERTIFICATE_PWD }}
           echo $MACOS_CERTIFICATE | base64 --decode > certificate.p12
           security create-keychain -p $KEYCHAIN_PASS build.keychain
           security default-keychain -s build.keychain
