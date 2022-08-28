@@ -10,6 +10,7 @@ jobs:
   build:
     name: Build using xcodebuild command
     runs-on: macos-latest
+    environment: prod
     steps:
       - name: Checkout
         uses: actions/checkout@v3
