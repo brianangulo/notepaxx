@@ -3,6 +3,8 @@ name: Build and Release to GH releases
 on:
   push:
     branches: ['main']
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build:
@@ -18,18 +20,20 @@ jobs:
           mkdir app
           mv build/Build/Products/Release/notepaxx.app app
       - name: Codesign executable
+        run: |
+          KEYCHAIN_PASS=Password123
+          echo passw $MACOS_CERTIFICATE_PWD
+          echo $MACOS_CERTIFICATE | base64 --decode > certificate.p12
+          security create-keychain -p $KEYCHAIN_PASS build.keychain
+          security default-keychain -s build.keychain
+          security unlock-keychain -p $KEYCHAIN_PASS build.keychain
+          security import certificate.p12 -k build.keychain -P $MACOS_CERTIFICATE_PWD -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k Password123 build.keychain
+          /usr/bin/codesign --force -s $SECURITY_IDENTITY ./app/notepaxx.app -v
         env: 
           MACOS_CERTIFICATE: ${{ secrets.MACOS_CERTIFICATE }}
           MACOS_CERTIFICATE_PWD: ${{ secrets.MACOS_CERTIFICATE_PWD }}
           SECURITY_IDENTITY: ${{ secrets.SECURITY_IDENTITY }}
-        run: |
-          echo $MACOS_CERTIFICATE | base64 --decode > certificate.p12
-          security create-keychain -p Password123 build.keychain
-          security default-keychain -s build.keychain
-          security unlock-keychain -p Password123 build.keychain
-          security import certificate.p12 -k build.keychain -P $MACOS_CERTIFICATE_PWD -T /usr/bin/codesign
-          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k Password123 build.keychain
-          /usr/bin/codesign --force ./app/notepaxx.app -v
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
